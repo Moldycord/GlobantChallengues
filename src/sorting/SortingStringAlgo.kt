@@ -32,10 +32,12 @@ class SortingStringAlgo {
         lettersChars.sortWith(compareBy({ it.second }, { it.first }))
         numberChars.sortWith(compareBy({ it.second }, { it.first }))
 
-        val sortedChars = mutableListOf<Char>()
-        sortedChars.addAll(lettersChars.map { it.first })
-        sortedChars.addAll(numberChars.map { it.first })
-        sortedChars.addAll(otherChars)
+        val sortedChars = mutableListOf<Char>().apply {
+            addAll(lettersChars.map { it.first })
+            addAll(numberChars.map { it.first })
+            addAll(otherChars)
+        }
+
         println(sortedChars.joinToString(""))
     }
 }
