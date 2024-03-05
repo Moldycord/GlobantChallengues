@@ -1,3 +1,4 @@
+import sorting.PascalTriangleChallenge
 import sorting.SortingStringAlgo
 import sorting.ValidateOpenAndCloseChars
 
@@ -10,4 +11,8 @@ fun main() {
 
     validateOpenAndClose.validateInput("()(())")
     validateOpenAndClose.validateInput("(())(((((")
+
+    val pascalTriangleChallenge = PascalTriangleChallenge()
+    val triangle = pascalTriangleChallenge.doTriangle(5)
+    triangle.forEach { println(it) }
 }
